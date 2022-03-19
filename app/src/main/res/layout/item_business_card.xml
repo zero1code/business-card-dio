@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_business_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Nome Empresa"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_name"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="24dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_site"
+                app:layout_constraintEnd_toStartOf="@+id/tv_email"
+                app:layout_constraintTop_toTopOf="@+id/tv_phone"
+                tools:text="Airton Oliveira" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/tv_email"
+                app:layout_constraintBottom_toTopOf="@id/tv_email"
+                app:layout_constraintStart_toStartOf="@+id/tv_email"
+                tools:text="(11) 91234-5678" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintBottom_toTopOf="@id/tv_site"
+                tools:text="atn0803@gmail.com"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_site"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="@+id/tv_email"
+                app:layout_constraintStart_toStartOf="@+id/tv_email"
+                tools:text="www.google.com" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
